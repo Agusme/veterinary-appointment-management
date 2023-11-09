@@ -110,6 +110,9 @@ setCitas(filterCitas)
                       setDateDay(target.value);
                     }}
                   />
+                   <Form.Text className="text-muted">
+         IMPORTANTE mes - dia - año
+        </Form.Text>
                 </Form.Group>
               </Col>
               <Col xl={6} lg={6} md={6}>
@@ -122,6 +125,9 @@ setCitas(filterCitas)
                       setTimeDay(target.value);
                     }}
                   />
+                   <Form.Text className="text-muted">
+                    Horario de atención: 08:00 a 22:00
+        </Form.Text>
                 </Form.Group>
               </Col>
             </Row>
