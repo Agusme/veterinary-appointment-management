@@ -44,8 +44,10 @@ const FormVet = () => {
         timeDay,
         sintomas,
       };
-      setCitas([...citas, nuevaCita]);
+      setCitas((prevCitas) => [...prevCitas, nuevaCita]);
+
       e.target.reset();
+
 
       Swal.fire({
         position: "center",

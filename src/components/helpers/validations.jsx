@@ -1,6 +1,5 @@
 const regExpName = /^[A-Za-z\s?]+$/;
-const regExpDni = /^\d{7,8}$/
-const regHora = /^([01]\d|2[0-3]):([0-5]\d)$/;
+const regHora = /^(0[8-9]|1[0-9]|20|21):[0-5]\d$/;
 
 
 export const validateName =(field)=>{
@@ -11,25 +10,24 @@ if(regExpName.test(field) && field.trim() !== ""){
 }
 }
 
-export const validateDni =(field)=>{
-    if(regExpDni.test(field) && field.trim() !== ""){
-        return true;
-    }else{
-        return false
-    }
-}
+
 export const validateFecha = (field) => {
-    if (field && field !== "") {
-        return true;
+    if (field !== "") {
+        let fechaActual = new Date();
+        fechaActual.setHours(0, 0, 0, 0);
+        let fechaCampo = new Date(field);
+        
+        return fechaCampo >= fechaActual;
     }
-    return false; 
+
+    return false;  
 }
-export const validateHora = (field) =>{
-    if (field && field !== ""){
-        if(regHora.test(field)){
-            return true;
-        }else{
-            return false;
-        }
-    }
-}
+
+export const validateHora = (field) => {
+    return regHora.test(field) && field !== "";
+};
+
+  
+  
+  
+  
