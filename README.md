@@ -11,7 +11,7 @@ This project is about managing veterinary appointments through a form
 - Sweet Alert
 
 ## Author
-Agustina Mene
+Agustina Mena
 
 ## Available Scripts
 
